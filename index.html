@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download YOUR APP NAME</title>
+<style>
+:root{--bg:#f3f6f4;--ink:#14241c;--muted:#52665b;--card:#ffffff;--line:#d3ddd7;--accent:#0f7a4d;--accent-ink:#ffffff;--warn:#fff4d6;--warn-ink:#5c4300}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1713;--ink:#e6efe9;--muted:#9bb0a4;--card:#17221c;--line:#2a3a31;--accent:#3ecf8e;--accent-ink:#06210f;--warn:#3a2f10;--warn-ink:#f3dc9a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+main{max-width:640px;margin:0 auto;padding:40px 20px 64px}
+h1{font-size:2.2rem;line-height:1.15;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 28px}
+.btn{display:block;text-align:center;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:1.15rem;text-decoration:none;padding:18px 20px;border-radius:12px}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.meta{color:var(--muted);font-size:.9rem;text-align:center;margin:10px 0 36px}
+h2{font-size:1.3rem;margin:36px 0 12px}
+ol{padding:0;margin:0;list-style:none;counter-reset:s}
+li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px 14px 56px;margin-bottom:10px;position:relative}
+li::before{content:counter(s);position:absolute;left:16px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;text-align:center;line-height:28px;font-size:.95rem}
+li strong{display:block}
+li span{color:var(--muted);font-size:.95rem}
+.note{background:var(--warn);color:var(--warn-ink);border-radius:10px;padding:14px 16px;font-size:.95rem;margin-top:20px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details p{margin:8px 0 0;color:var(--muted);font-size:.95rem}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+  <h1>YOUR APP NAME</h1>
+  <p class="sub">Free download for Android. Follow the steps below to install it.</p>
+
+  <!-- REPLACE the link below with your GitHub Releases file URL -->
+  <a class="btn" href="https://github.com/USER/REPO/releases/download/v1.0/app.apk+" download>Download APK+ (300 MB)</a>
+  <p class="meta">Version 1.0 · Android 8.0 or newer · Use Wi-Fi if you can</p>
+
+  <h2>How to install</h2>
+  <ol>
+    <li><strong>Download the file</strong><span>Tap the green button. Your phone saves it to the Downloads folder. If the browser warns the file may be harmful, choose Keep or Download anyway.</span></li>
+    <li><strong>Install File Manager + from the Play Store</strong><span>Open the Google Play Store, search for “File Manager +”, and tap Install. You need this app because a plain APK+ file can’t be opened by the default installer.</span></li>
+    <li><strong>Open File Manager +</strong><span>Allow storage access if it asks, then go to Downloads.</span></li>
+    <li><strong>Tap the APK+ file</strong><span>Choose Install (or Open with installer) when it asks what to do with the file.</span></li>
+    <li><strong>Allow installs from this source</strong><span>If Android shows “For your security, your phone isn’t allowed to install unknown apps from this source”, tap Settings, switch on Allow from this source, then go back and tap Install again.</span></li>
+    <li><strong>Open the app</strong><span>When installation finishes, tap Open, or find the app in your app drawer.</span></li>
+  </ol>
+
+  <div class="note">After installing, you can switch “Allow from this source” back off in Settings for safety.</div>
+
+  <h2>Problems?</h2>
+  <details><summary>The download stops or fails</summary><p>The file is large. Switch to Wi-Fi, make sure you have at least 1 GB of free space, and try again.</p></details>
+  <details><summary>“App not installed” error</summary><p>Uninstall any older version of the app first, then install again. Also check your Android version meets the requirement above.</p></details>
+  <details><summary>I can’t find the file after downloading</summary><p>Open File Manager + and look in Downloads, or check the browser’s download list.</p></details>
+  <details><summary>Is this safe?</summary><p>Only install files from this page. Android may show warnings for any app installed outside the Play Store.</p></details>
+</main>
+</body>
+</html>
