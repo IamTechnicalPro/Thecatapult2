@@ -3,57 +3,531 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Download YOUR APP NAME</title>
+<title>The Catapult 2 v8.3.0 Mod (Energy Cannon) – Download APK+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f3f6f4;--ink:#14241c;--muted:#52665b;--card:#ffffff;--line:#d3ddd7;--accent:#0f7a4d;--accent-ink:#ffffff;--warn:#fff4d6;--warn-ink:#5c4300}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1713;--ink:#e6efe9;--muted:#9bb0a4;--card:#17221c;--line:#2a3a31;--accent:#3ecf8e;--accent-ink:#06210f;--warn:#3a2f10;--warn-ink:#f3dc9a}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
-main{max-width:640px;margin:0 auto;padding:40px 20px 64px}
-h1{font-size:2.2rem;line-height:1.15;margin:0 0 8px}
-.sub{color:var(--muted);margin:0 0 28px}
-.btn{display:block;text-align:center;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:1.15rem;text-decoration:none;padding:18px 20px;border-radius:12px}
-.btn:focus-visible,a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.meta{color:var(--muted);font-size:.9rem;text-align:center;margin:10px 0 36px}
-h2{font-size:1.3rem;margin:36px 0 12px}
-ol{padding:0;margin:0;list-style:none;counter-reset:s}
-li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px 14px 56px;margin-bottom:10px;position:relative}
-li::before{content:counter(s);position:absolute;left:16px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;text-align:center;line-height:28px;font-size:.95rem}
-li strong{display:block}
-li span{color:var(--muted);font-size:.95rem}
-.note{background:var(--warn);color:var(--warn-ink);border-radius:10px;padding:14px 16px;font-size:.95rem;margin-top:20px}
-details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
-summary{cursor:pointer;font-weight:600}
-details p{margin:8px 0 0;color:var(--muted);font-size:.95rem}
-a{color:var(--accent)}
+  :root {
+    --bg: #0b0f14;
+    --surface: #141b24;
+    --surface-hover: #1b2430;
+    --border: #222d3d;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent: #22c55e;
+    --accent-hover: #16a34a;
+    --accent-light: rgba(34, 197, 94, 0.12);
+    --badge-bg: #1e293b;
+    --warn-bg: rgba(245, 158, 11, 0.1);
+    --warn-border: rgba(245, 158, 11, 0.25);
+    --warn-text: #fbbf24;
+    --radius: 10px;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-hover: #f1f5f9;
+      --border: #e2e8f0;
+      --text-primary: #0f172a;
+      --text-secondary: #64748b;
+      --accent: #16a34a;
+      --accent-hover: #15803d;
+      --accent-light: rgba(22, 163, 74, 0.1);
+      --badge-bg: #e2e8f0;
+      --warn-bg: #fefce8;
+      --warn-border: #fef08a;
+      --warn-text: #854d0e;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+    padding-bottom: 60px;
+  }
+
+  /* Navigation Bar */
+  .top-bar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 20px;
+    font-size: 0.88rem;
+  }
+  .top-bar-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .breadcrumb {
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .breadcrumb a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .official-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.82rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .official-link:hover { color: var(--accent); }
+
+  /* Main Container */
+  main {
+    max-width: 800px;
+    margin: 28px auto 0;
+    padding: 0 16px;
+  }
+
+  /* App Header */
+  .app-header {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .app-icon {
+    width: 84px;
+    height: 84px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    background: #000;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .app-info { flex: 1; }
+  .app-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+  .app-dev {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    margin-bottom: 12px;
+  }
+  .app-dev a {
+    color: inherit;
+    text-decoration: underline;
+  }
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .badge {
+    background: var(--badge-bg);
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+  .badge.mod {
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Disclaimer Box */
+  .alert-box {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-border);
+    color: var(--warn-text);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    margin-top: 16px;
+  }
+
+  /* Screenshot Gallery */
+  .section-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 28px 0 12px;
+  }
+  .gallery-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .gallery-item {
+    height: 190px;
+    min-width: 270px;
+    background: var(--surface);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 2;
+    position: relative;
+  }
+  .gallery-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 1px dashed var(--border);
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    padding: 12px;
+    text-align: center;
+    background: var(--surface);
+  }
+  .gallery-placeholder code {
+    background: var(--badge-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: var(--text-primary);
+  }
+
+  /* Download Card */
+  .download-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    margin-top: 24px;
+  }
+  .file-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .file-details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .file-icon {
+    width: 42px;
+    height: 42px;
+    background: var(--badge-bg);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+  .file-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    word-break: break-all;
+  }
+  .file-sub {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+  }
+
+  .btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: var(--accent);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+  }
+  .btn-download:hover { background: var(--accent-hover); }
+  .btn-download svg { width: 20px; height: 20px; fill: currentColor; }
+
+  /* Specs Grid */
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+  .spec-item { font-size: 0.82rem; }
+  .spec-label { color: var(--text-secondary); margin-bottom: 2px; }
+  .spec-value { font-weight: 600; }
+
+  /* Installation Steps */
+  .steps-container {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 8px 18px;
+  }
+  .step-row {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .step-row:last-child { border-bottom: none; }
+  .step-num {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--badge-bg);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .step-content h4 {
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+  .step-content p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+  .step-content a {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  /* FAQ Accordion */
+  .faq-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  details {
+    border-bottom: 1px solid var(--border);
+    padding: 14px 18px;
+  }
+  details:last-child { border-bottom: none; }
+  summary {
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+  }
+  details p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 40px;
+  }
+  footer a { color: var(--text-secondary); }
+
+  @media (max-width: 600px) {
+    .app-header { flex-direction: column; }
+    .gallery-item { height: 160px; min-width: 230px; }
+  }
 </style>
 </head>
 <body>
+
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="breadcrumb">
+      <span>Android</span> / <span>Games</span> / <a href="#">The Catapult 2</a>
+    </div>
+    <!-- Direct link to official BYV games site -->
+    <a href="https://byvgames.com/games/catapult.php" target="_blank" rel="noopener" class="official-link">
+      BYV Official Site ↗
+    </a>
+  </div>
+</div>
+
 <main>
-  <h1>YOUR APP NAME</h1>
-  <p class="sub">Free download for Android. Follow the steps below to install it.</p>
+  <!-- App Header Card -->
+  <div class="app-header">
+    <!-- Official app icon from BYV -->
+    <img 
+      class="app-icon" 
+      src="https://byvgames.com/images/icons/catapult2.webp" 
+      alt="The Catapult 2 Icon"
+    >
+    <div class="app-info">
+      <h1 class="app-title">The Catapult 2 (Mod: Energy Cannon)</h1>
+      <div class="app-dev">Original game by <a href="https://byvgames.com/games/catapult.php" target="_blank" rel="noopener">BYV</a> · Community fan modification</div>
+      <div class="badges">
+        <span class="badge mod">Energy Cannon Mod</span>
+        <span class="badge">v8.3.0</span>
+        <span class="badge">APK+</span>
+        <span class="badge">300 MB</span>
+      </div>
+    </div>
+  </div>
 
-  <!-- REPLACE the link below with your GitHub Releases file URL -->
-  <a class="btn" href="https://github.com/USER/REPO/releases/download/v1.0/app.apk+" download>Download APK+ (300 MB)</a>
-  <p class="meta">Version 1.0 · Android 8.0 or newer · Use Wi-Fi if you can</p>
+  <!-- Disclaimer -->
+  <div class="alert-box">
+    <strong>Unofficial Mod Notice:</strong> This release is a fan-made mod featuring new custom content. It is not developed by or affiliated with BYV. All original game rights, trademarks, and assets belong to BYV.
+  </div>
 
-  <h2>How to install</h2>
-  <ol>
-    <li><strong>Download the file</strong><span>Tap the green button. Your phone saves it to the Downloads folder. If the browser warns the file may be harmful, choose Keep or Download anyway.</span></li>
-    <li><strong>Install File Manager + from the Play Store</strong><span>Open the Google Play Store, search for “File Manager +”, and tap Install. You need this app because a plain APK+ file can’t be opened by the default installer.</span></li>
-    <li><strong>Open File Manager +</strong><span>Allow storage access if it asks, then go to Downloads.</span></li>
-    <li><strong>Tap the APK+ file</strong><span>Choose Install (or Open with installer) when it asks what to do with the file.</span></li>
-    <li><strong>Allow installs from this source</strong><span>If Android shows “For your security, your phone isn’t allowed to install unknown apps from this source”, tap Settings, switch on Allow from this source, then go back and tap Install again.</span></li>
-    <li><strong>Open the app</strong><span>When installation finishes, tap Open, or find the app in your app drawer.</span></li>
-  </ol>
+  <!-- Screenshots (image1.png, image2.png, and the original game banner from BYV) -->
+  <h2 class="section-title">Screenshots</h2>
+  <div class="gallery-scroll">
+    <!-- Image 1 -->
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <span>Image slot 1</span>
+        <code>image1.png</code>
+      </div>
+      <img src="image1.png" alt="Mod Screenshot 1" onerror="this.remove()">
+    </div>
 
-  <div class="note">After installing, you can switch “Allow from this source” back off in Settings for safety.</div>
+    <!-- Image 2 -->
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <span>Image slot 2</span>
+        <code>image2.png</code>
+      </div>
+      <img src="image2.png" alt="Mod Screenshot 2" onerror="this.remove()">
+    </div>
 
-  <h2>Problems?</h2>
-  <details><summary>The download stops or fails</summary><p>The file is large. Switch to Wi-Fi, make sure you have at least 1 GB of free space, and try again.</p></details>
-  <details><summary>“App not installed” error</summary><p>Uninstall any older version of the app first, then install again. Also check your Android version meets the requirement above.</p></details>
-  <details><summary>I can’t find the file after downloading</summary><p>Open File Manager + and look in Downloads, or check the browser’s download list.</p></details>
-  <details><summary>Is this safe?</summary><p>Only install files from this page. Android may show warnings for any app installed outside the Play Store.</p></details>
+    <!-- Original Game Artwork (from byvgames.com) -->
+    <div class="gallery-item">
+      <img src="https://byvgames.com/images/icons/poster15_24.webp" alt="The Catapult 2 Original Game Art">
+    </div>
+  </div>
+
+  <!-- Download Box -->
+  <div class="download-card">
+    <div class="file-row">
+      <div class="file-details">
+        <div class="file-icon">📦</div>
+        <div>
+          <div class="file-name">The.Catapult.2.8.3.0.apk+</div>
+          <div class="file-sub">Release V1.0 · 300.0 MB</div>
+        </div>
+      </div>
+    </div>
+
+    <a class="btn-download" href="https://github.com/IamTechnicalPro/Thecatapult2/releases/download/V1.0/The.Catapult.2.8.3.0.apk%2B" download>
+      <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+      Download The Catapult 2 Mod (300 MB)
+    </a>
+
+    <div class="spec-grid">
+      <div class="spec-item">
+        <div class="spec-label">Version</div>
+        <div class="spec-value">8.3.0 (Energy Cannon)</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Android Version</div>
+        <div class="spec-value">8.0 or newer</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">File Type</div>
+        <div class="spec-value">.apk+ (Bundled)</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Network</div>
+        <div class="spec-value">Wi-Fi recommended</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step-by-Step Installation -->
+  <h2 class="section-title">How to Install</h2>
+  <div class="steps-container">
+    <div class="step-row">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Download the file</h4>
+        <p>Tap the green download button above. If your browser warns that the file may be harmful, choose <strong>Download anyway</strong>.</p>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Install File Manager + from Google Play</h4>
+        <p>A plain APK+ file cannot be opened by Android's default installer. Download <a href="https://play.google.com/store/apps/details?id=com.alphainventor.filemanager" target="_blank" rel="noopener">File Manager + from Google Play</a> to open and unpack it.</p>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Open File Manager +</h4>
+        <p>Grant storage access if requested, navigate to your <strong>Downloads</strong> folder, and tap <strong>The.Catapult.2.8.3.0.apk+</strong>.</p>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Allow unknown sources &amp; finish</h4>
+        <p>Choose <strong>Install</strong>. If Android shows "For your security, your phone isn't allowed to install unknown apps from this source", tap <strong>Settings</strong>, toggle on <strong>Allow from this source</strong>, go back and tap Install.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Troubleshooting FAQ -->
+  <h2 class="section-title">Troubleshooting</h2>
+  <div class="faq-card">
+    <details>
+      <summary>Download stops or fails</summary>
+      <p>The file is 300 MB. Make sure you have at least 1 GB of free space on your phone and a stable Wi-Fi connection.</p>
+    </details>
+    <details>
+      <summary>"App not installed" error</summary>
+      <p>Uninstall any older or official versions of the game first, then retry the installation using File Manager +.</p>
+    </details>
+    <details>
+      <summary>Can't find the file after downloading</summary>
+      <p>Open File Manager + and look inside the Downloads directory, or check your browser's download history.</p>
+    </details>
+  </div>
+
+  <footer>
+    <p>Fan-made mod page. Please support the creators by checking out the official game at <a href="https://byvgames.com/games/catapult.php" target="_blank" rel="noopener">byvgames.com</a>.</p>
+  </footer>
 </main>
+
 </body>
 </html>
